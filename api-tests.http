@@ -1,0 +1,56 @@
+### USER API (LAB 04)
+
+### Pobierz wszystkich użytkowników
+GET http://localhost:8080/v1/users
+Accept: application/json
+
+### Pobierz wszystkich użytkowników
+GET http://localhost:8080/v1/users/simple
+Accept: application/json
+
+### Pobierz szczegóły konkretnego użytkownika
+GET http://localhost:8080/v1/users/1
+Accept: application/json
+
+### Wyszukaj użytkownika po emailu
+GET http://localhost:8080/v1/users/email?email=Mikołaj.Święty@domain.com
+Accept: application/json
+
+### Wyszukaj użytkowników starszych niż data
+GET http://localhost:8080/v1/users/older/1980-01-01
+Accept: application/json
+
+### Dodaj nowego użytkownika
+POST http://localhost:8080/v1/users
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "birthdate": "1995-05-15",
+  "email": "test@user.com"
+}
+
+### Aktualizuj użytkownika
+PUT http://localhost:8080/v1/users/1
+Content-Type: application/json
+
+{
+  "firstName": "Mikołaj",
+  "lastName": "Zmieniony",
+  "birthdate": "1957-12-06",
+  "email": "santa.new@laponia.com"
+}
+
+### Usuń użytkownika
+DELETE http://localhost:8080/v1/users/2
+
+
+### TRAINING API (LAB 05)
+### Pobierz wszystkie treningi
+GET http://localhost:8080/v1/trainings
+Accept: application/json
+
+### Pobierz treningi dla konkretnego użytkownika
+GET http://localhost:8080/v1/trainings/1
+Accept: application/json

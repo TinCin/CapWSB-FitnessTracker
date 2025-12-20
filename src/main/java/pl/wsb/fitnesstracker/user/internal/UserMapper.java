@@ -7,9 +7,9 @@ import pl.wsb.fitnesstracker.user.api.UserEmailSimpleDto;
 import pl.wsb.fitnesstracker.user.api.UserSimpleDto;
 
 @Component
-class UserMapper {
+public class UserMapper {
 
-    UserDto toDto(User user) {
+    public UserDto toDto(User user) {
         return new UserDto(user.getId(),
                 user.getFirstName(),
                 user.getLastName(),
